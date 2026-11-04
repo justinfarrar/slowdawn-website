@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Slowdawn · The alarm that eases you in</title>
-<meta name="description" content="Slowdawn is an iPhone alarm that plans your mornings for you. It moves your wake time a few minutes at a time, works around weekends, clock changes and trips, and explains every alarm it sets.">
+<meta name="description" content="Slowdawn is an iPhone alarm that plans your mornings for you. It moves your wake time a few minutes at a time, works around weekends, clock changes and travel, and explains every alarm it sets.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://slowdawnapp.com/">
 <meta property="og:title" content="Slowdawn · The alarm that eases you in">
@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="sky" aria-hidden="true"></div>
 
 <header class="top">
   <div class="wrap">
@@ -33,16 +34,16 @@
   <!-- Hero -->
   <div class="hero">
     <div class="wrap hero-grid">
-      <div class="hero-copy">
+      <div class="hero-copy" data-hero-copy>
         <p class="eyebrow">An alarm for iPhone</p>
         <h1>Wake up gently. <em>Slowdawn does the planning.</em></h1>
-        <p class="lede">Tell it when you want to be up. It moves your alarm there a few minutes at a time, thinks ahead about weekends, clock changes and trips, and tells you why every alarm is set where it is. All you do is wake up.</p>
+        <p class="lede">Tell it when you want to be up. It moves your alarm there a few minutes at a time, thinks ahead about weekends, clock changes and travel, and tells you why every alarm is set where it is. All you do is wake up.</p>
         <div class="cta-row">
-          <a class="store" href="#launch"><span>Coming to the App Store</span><strong>January 2027</strong></a>
+          <a class="store" href="#launch"><span>Coming soon to the</span><strong>App Store</strong></a>
           <p class="cta-note">14 days of everything, free.<br>No account, ever.</p>
         </div>
       </div>
-      <div class="phone">
+      <div class="phone" data-depth="-0.08">
         <video autoplay muted loop playsinline preload="metadata" poster="media/tour-poster.jpg"
                aria-label="A short tour of Slowdawn: tomorrow's alarm, 7:40, day 4 of 12 toward 7:00. Tapping a day shows how its alarm was worked out, and the Journey chart shows the whole plan stepping toward the goal.">
           <source src="media/tour.mp4" type="video/mp4">
@@ -61,7 +62,7 @@
       <div class="steps">
         <div class="step reveal">
           <h3>Tell it your goal</h3>
-          <p>When you need to be up, when you get up now, and how gently you'd like to get there. That's the whole setup.</p>
+          <p>When you need to be up, when you get up now, and how gently you'd like to get there.</p>
         </div>
         <div class="step reveal">
           <h3>It plans the way</h3>
@@ -81,38 +82,44 @@
       <div class="section-head reveal">
         <p class="eyebrow">It thinks ahead</p>
         <h2>Life changes the plan. <em>You don't have to.</em></h2>
-        <p>The moments that usually wreck a sleep routine are the ones Slowdawn plans for. You'll see each one coming, already handled.</p>
+        <p>The moments that usually wreck a routine, already planned for. Each dot is a morning.</p>
       </div>
       <div class="scenes">
         <article class="scene reveal">
+          <svg class="mini" viewBox="0 0 240 100" role="img" aria-hidden="true"><line class="target" x1="14" x2="226" y1="70.0" y2="70.0"/><text class="lbl" x="226" y="83.0" text-anchor="end">7:00</text><polyline class="trace" pathLength="1" points="14.0,22.0 31.7,26.0 49.3,30.0 67.0,34.0 84.7,38.0 102.3,42.0 120.0,46.0 137.7,50.0 155.3,54.0 173.0,58.0 190.7,62.0 208.3,66.0 226.0,70.0"/><circle class="pt" style="--i:0" cx="14.0" cy="22.0" r="3.6"/><circle class="pt" style="--i:1" cx="31.7" cy="26.0" r="3.6"/><circle class="pt" style="--i:2" cx="49.3" cy="30.0" r="3.6"/><circle class="pt" style="--i:3" cx="67.0" cy="34.0" r="3.6"/><circle class="pt" style="--i:4" cx="84.7" cy="38.0" r="3.6"/><circle class="pt" style="--i:5" cx="102.3" cy="42.0" r="3.6"/><circle class="pt" style="--i:6" cx="120.0" cy="46.0" r="3.6"/><circle class="pt" style="--i:7" cx="137.7" cy="50.0" r="3.6"/><circle class="pt" style="--i:8" cx="155.3" cy="54.0" r="3.6"/><circle class="pt" style="--i:9" cx="173.0" cy="58.0" r="3.6"/><circle class="pt" style="--i:10" cx="190.7" cy="62.0" r="3.6"/><circle class="pt" style="--i:11" cx="208.3" cy="66.0" r="3.6"/><circle class="pt" style="--i:12" cx="226.0" cy="70.0" r="3.6"/></svg>
           <h3>A new wake-up time</h3>
-          <p>No jumping an hour overnight. It gets you there in steps your body can keep up with.</p>
-          <span class="reason"><b>7:40</b> Workdays · day 4 of 12 toward 7:00</span>
+          <p>Reached in small daily steps.</p>
+          <span class="reason"><b>7:40</b> Day 4&nbsp;of&nbsp;12 toward&nbsp;7:00</span>
         </article>
         <article class="scene reveal">
+          <svg class="mini" viewBox="0 0 240 100" role="img" aria-hidden="true"><line class="mark" x1="173.0" x2="173.0" y1="10" y2="88"/><text class="lbl" x="173.0" y="5" text-anchor="middle">change</text><polyline class="ghost" points="14.0,22.3 31.7,22.3 49.3,22.3 67.0,22.3 84.7,22.3 102.3,22.3 120.0,22.3 137.7,22.3 155.3,22.3 173.0,73.7 190.7,73.7 208.3,73.7 226.0,73.7"/><polyline class="trace" pathLength="1" points="14.0,22.3 31.7,22.3 49.3,22.3 67.0,29.6 84.7,37.0 102.3,44.3 120.0,51.7 137.7,59.0 155.3,66.4 173.0,73.7 190.7,73.7 208.3,73.7 226.0,73.7"/><circle class="pt" style="--i:0" cx="14.0" cy="22.3" r="3.6"/><circle class="pt" style="--i:1" cx="31.7" cy="22.3" r="3.6"/><circle class="pt" style="--i:2" cx="49.3" cy="22.3" r="3.6"/><circle class="pt" style="--i:3" cx="67.0" cy="29.6" r="3.6"/><circle class="pt" style="--i:4" cx="84.7" cy="37.0" r="3.6"/><circle class="pt" style="--i:5" cx="102.3" cy="44.3" r="3.6"/><circle class="pt" style="--i:6" cx="120.0" cy="51.7" r="3.6"/><circle class="pt" style="--i:7" cx="137.7" cy="59.0" r="3.6"/><circle class="pt" style="--i:8" cx="155.3" cy="66.4" r="3.6"/><circle class="pt" style="--i:9" cx="173.0" cy="73.7" r="3.6"/><circle class="pt" style="--i:10" cx="190.7" cy="73.7" r="3.6"/><circle class="pt" style="--i:11" cx="208.3" cy="73.7" r="3.6"/><circle class="pt" style="--i:12" cx="226.0" cy="73.7" r="3.6"/></svg>
           <h3>The clocks change</h3>
-          <p>The hour is spread across the week around it, so the change arrives without the jolt.</p>
-          <span class="reason"><b>6:56</b> Easing into the clock change, 5 of 7</span>
+          <p>The hour, spread across the week.</p>
+          <span class="reason"><b>6:56</b> Clock change,&nbsp;5&nbsp;of&nbsp;7</span>
         </article>
         <article class="scene reveal">
+          <svg class="mini" viewBox="0 0 240 100" role="img" aria-hidden="true"><polyline class="trace" pathLength="1" points="14.0,66.0 30.3,66.0 46.6,66.0 62.9,66.0 79.2,66.0 95.5,30.0 111.8,30.0 128.2,66.0 144.5,66.0 160.8,66.0 177.1,66.0 193.4,66.0 209.7,30.0 226.0,30.0"/><circle class="pt" style="--i:0" cx="14.0" cy="66.0" r="3.6"/><circle class="pt" style="--i:1" cx="30.3" cy="66.0" r="3.6"/><circle class="pt" style="--i:2" cx="46.6" cy="66.0" r="3.6"/><circle class="pt" style="--i:3" cx="62.9" cy="66.0" r="3.6"/><circle class="pt" style="--i:4" cx="79.2" cy="66.0" r="3.6"/><circle class="pt hi" style="--i:5" cx="95.5" cy="30.0" r="3.6"/><circle class="pt hi" style="--i:6" cx="111.8" cy="30.0" r="3.6"/><circle class="pt" style="--i:7" cx="128.2" cy="66.0" r="3.6"/><circle class="pt" style="--i:8" cx="144.5" cy="66.0" r="3.6"/><circle class="pt" style="--i:9" cx="160.8" cy="66.0" r="3.6"/><circle class="pt" style="--i:10" cx="177.1" cy="66.0" r="3.6"/><circle class="pt" style="--i:11" cx="193.4" cy="66.0" r="3.6"/><circle class="pt hi" style="--i:12" cx="209.7" cy="30.0" r="3.6"/><circle class="pt hi" style="--i:13" cx="226.0" cy="30.0" r="3.6"/></svg>
           <h3>Weekends</h3>
-          <p>Sleep in a little, with the sunrise if you like. Weekends move in step, so Monday never jumps.</p>
-          <span class="reason"><b>7:52</b> Weekends · Sunrise +5</span>
+          <p>A little lie-in. Monday never jumps.</p>
+          <span class="reason"><b>7:52</b> Weekends · Sunrise&nbsp;+5</span>
         </article>
         <article class="scene reveal">
+          <svg class="mini" viewBox="0 0 240 100" role="img" aria-hidden="true"><line class="target" x1="14" x2="226" y1="64.7" y2="64.7"/><text class="lbl" x="226" y="77.7" text-anchor="end">6:45</text><line class="mark" x1="226.0" x2="226.0" y1="10" y2="88"/><text class="lbl" x="226.0" y="5" text-anchor="middle">day one</text><polyline class="trace" pathLength="1" points="14.0,24.7 35.2,31.3 56.4,38.0 77.6,44.7 98.8,51.3 120.0,58.0 141.2,64.7 162.4,64.7 183.6,64.7 204.8,64.7 226.0,64.7"/><circle class="pt" style="--i:0" cx="14.0" cy="24.7" r="3.6"/><circle class="pt" style="--i:1" cx="35.2" cy="31.3" r="3.6"/><circle class="pt" style="--i:2" cx="56.4" cy="38.0" r="3.6"/><circle class="pt" style="--i:3" cx="77.6" cy="44.7" r="3.6"/><circle class="pt" style="--i:4" cx="98.8" cy="51.3" r="3.6"/><circle class="pt" style="--i:5" cx="120.0" cy="58.0" r="3.6"/><circle class="pt" style="--i:6" cx="141.2" cy="64.7" r="3.6"/><circle class="pt" style="--i:7" cx="162.4" cy="64.7" r="3.6"/><circle class="pt" style="--i:8" cx="183.6" cy="64.7" r="3.6"/><circle class="pt" style="--i:9" cx="204.8" cy="64.7" r="3.6"/><circle class="pt" style="--i:10" cx="226.0" cy="64.7" r="3.6"/></svg>
           <h3>A big day ahead</h3>
-          <p>New job, first day of school, an early flight. Give it the date and you'll be ready a few days early.</p>
-          <span class="reason"><b>7:15</b> Workdays · day 3 of 6 toward 6:45 for New job</span>
+          <p>On the new time days early.</p>
+          <span class="reason"><b>7:15</b> Day 3&nbsp;of&nbsp;6 for New&nbsp;job</span>
         </article>
         <article class="scene reveal">
+          <svg class="mini" viewBox="0 0 240 100" role="img" aria-hidden="true"><line class="mark" x1="137.7" x2="137.7" y1="10" y2="88"/><text class="lbl" x="137.7" y="5" text-anchor="middle">fly</text><polyline class="trace" pathLength="1" points="14.0,25.5 31.7,25.5 49.3,25.5 67.0,25.5 84.7,40.5 102.3,55.5 120.0,70.5 137.7,70.5 155.3,70.5 173.0,70.5 190.7,70.5 208.3,70.5 226.0,70.5"/><circle class="pt" style="--i:0" cx="14.0" cy="25.5" r="3.6"/><circle class="pt" style="--i:1" cx="31.7" cy="25.5" r="3.6"/><circle class="pt" style="--i:2" cx="49.3" cy="25.5" r="3.6"/><circle class="pt" style="--i:3" cx="67.0" cy="25.5" r="3.6"/><circle class="pt" style="--i:4" cx="84.7" cy="40.5" r="3.6"/><circle class="pt" style="--i:5" cx="102.3" cy="55.5" r="3.6"/><circle class="pt" style="--i:6" cx="120.0" cy="70.5" r="3.6"/><circle class="pt" style="--i:7" cx="137.7" cy="70.5" r="3.6"/><circle class="pt" style="--i:8" cx="155.3" cy="70.5" r="3.6"/><circle class="pt" style="--i:9" cx="173.0" cy="70.5" r="3.6"/><circle class="pt" style="--i:10" cx="190.7" cy="70.5" r="3.6"/><circle class="pt" style="--i:11" cx="208.3" cy="70.5" r="3.6"/><circle class="pt" style="--i:12" cx="226.0" cy="70.5" r="3.6"/></svg>
           <h3>Travel</h3>
-          <p>Shift a little each day before you fly, so you land closer to local time. Then keep your usual, or move it.</p>
-          <span class="reason"><b>7:30</b> In London · your usual +30 min</span>
+          <p>Land closer to local time.</p>
+          <span class="reason"><b>7:30</b> In London · usual&nbsp;+30</span>
         </article>
         <article class="scene reveal">
+          <svg class="mini" viewBox="0 0 240 100" role="img" aria-hidden="true"><rect class="band" x="43.3" y="8" width="100.3" height="80" rx="8"/><text class="lbl" x="93.5" y="96" text-anchor="middle">vacation</text><polyline class="trace" pathLength="1" points="14.0,72.0 31.7,72.0 49.3,24.0 67.0,24.0 84.7,24.0 102.3,24.0 120.0,24.0 137.7,24.0 155.3,42.0 173.0,57.0 190.7,72.0 208.3,72.0 226.0,72.0"/><circle class="pt" style="--i:0" cx="14.0" cy="72.0" r="3.6"/><circle class="pt" style="--i:1" cx="31.7" cy="72.0" r="3.6"/><circle class="pt" style="--i:2" cx="49.3" cy="24.0" r="3.6"/><circle class="pt" style="--i:3" cx="67.0" cy="24.0" r="3.6"/><circle class="pt" style="--i:4" cx="84.7" cy="24.0" r="3.6"/><circle class="pt" style="--i:5" cx="102.3" cy="24.0" r="3.6"/><circle class="pt" style="--i:6" cx="120.0" cy="24.0" r="3.6"/><circle class="pt" style="--i:7" cx="137.7" cy="24.0" r="3.6"/><circle class="pt" style="--i:8" cx="155.3" cy="42.0" r="3.6"/><circle class="pt" style="--i:9" cx="173.0" cy="57.0" r="3.6"/><circle class="pt" style="--i:10" cx="190.7" cy="72.0" r="3.6"/><circle class="pt" style="--i:11" cx="208.3" cy="72.0" r="3.6"/><circle class="pt" style="--i:12" cx="226.0" cy="72.0" r="3.6"/></svg>
           <h3>Back from time off</h3>
-          <p>Vacations end gently too. It eases you back toward your workday time instead of all at once.</p>
-          <span class="reason"><b>7:20</b> Easing back after Vacation, 2 of 3</span>
+          <p>Eased back, not all at once.</p>
+          <span class="reason"><b>7:20</b> Easing back,&nbsp;2&nbsp;of&nbsp;3</span>
         </article>
       </div>
     </div>
@@ -131,7 +138,7 @@
           <li>Skip a day or sleep in from the Lock Screen</li>
         </ul>
       </div>
-      <div class="phone reveal">
+      <div class="phone reveal" data-depth="0.1">
         <img src="img/day.jpg" alt="Wednesday's alarm, 7:40, with how it was worked out: plan step 4 of 12 from 8:00, 5 minutes a step." width="720" height="1566" loading="lazy">
       </div>
     </div>
@@ -146,7 +153,7 @@
         <p>Seasonal clock changes are hard on the body. Slowdawn already knows the next one is coming and spreads the hour across the week, a few minutes a day.</p>
         <p>It's on automatically, and it's free. Next US change: March 14, 2027.</p>
       </div>
-      <div class="phone reveal">
+      <div class="phone reveal" data-depth="0.1">
         <img src="img/clock.jpg" alt="Clocks go forward: the week of March 7 to 14, each alarm a few minutes earlier than the last, reaching 7:30 on the day the clocks change." width="720" height="1564" loading="lazy">
       </div>
     </div>
@@ -165,7 +172,7 @@
           <li>Widgets, the Lock Screen and Apple Watch, all in step</li>
         </ul>
       </div>
-      <div class="phone reveal">
+      <div class="phone reveal" data-depth="0.1">
         <img src="img/journey.jpg" alt="The Journey chart: workday alarms stepping down from 8:00 toward 7:00 over two weeks, with the sunrise line beneath." width="720" height="1564" loading="lazy">
       </div>
     </div>
@@ -205,41 +212,54 @@
         <p>Long enough to finish a typical plan and feel the difference. Then keep the essentials for free, or go Pro.</p>
       </div>
       <div class="plans">
-        <div class="plan reveal">
+        <div class="plan free reveal">
           <h3>Free</h3>
           <p class="price">$0</p>
-          <p class="alt">Forever</p>
-          <ul class="tick-list">
+          <p class="alt">Forever, after the trial</p>
+          <p class="plan-lede">The gentle basics, and they keep working.</p>
+          <ul class="tick-list quiet">
             <li>Alarms that ring like the Clock app's</li>
-            <li>The plan you make in setup</li>
-            <li>Clock-change smoothing</li>
-            <li>Sunrise with an offset</li>
+            <li>The plan you design in setup</li>
+            <li>Clock changes eased automatically</li>
+            <li>Sunrise alarms with an offset</li>
+            <li>Backup alarms, widgets and the Lock Screen</li>
           </ul>
         </div>
         <div class="plan pro reveal">
-          <h3>Pro</h3>
-          <p class="price">$12.99 <small>a year</small></p>
-          <p class="alt">or $1.99 a month · or $24.99 once</p>
-          <ul class="tick-list">
-            <li>Plans for every schedule and big day</li>
-            <li>Sunrise limits and first light</li>
-            <li>Bedtime and wind-down</li>
-            <li>Trips, calendar and Apple Health</li>
+          <div class="pro-head">
+            <div>
+              <h3>Pro</h3>
+              <p class="price">$12.99 <small>a year</small></p>
+              <p class="alt">or $1.99 a month · or $24.99 once</p>
+            </div>
+            <p class="plan-lede">Everything in Free, plus the planning that handles the rest of your life.</p>
+          </div>
+          <ul class="pro-list">
+            <li><b>A plan for every schedule</b>Workdays, weekends, time off, gym days, each easing toward its own time.</li>
+            <li><b>Ready for the big day</b>A new job or school term: you're on the new time a few days early.</li>
+            <li><b>Trips and jet lag</b>Shift before you fly, then alarms on local time while you're away.</li>
+            <li><b>Never late for your first event</b>Your alarm moves earlier when your calendar starts early.</li>
+            <li><b>Bedtime that moves</b>Bedtime and a wind-down reminder that follow every change.</li>
+            <li><b>Sunrise, your way</b>An earliest and latest time, first light, and a softer seasonal swing.</li>
+            <li><b>Gentle one-off changes</b>Ease into and out of an early flight or a lie-in.</li>
+            <li><b>Mornings that adapt</b>After a short night, your plan waits a day. Reads Apple Health.</li>
+            <li><b>Clock changes your way</b>Choose before or after the change, and over how many days.</li>
+            <li><b>Your journey, day by day</b>Every wake time from where you started to where you're going.</li>
           </ul>
         </div>
       </div>
-      <p class="trial-note">The trial ends on its own and never turns into a charge. US prices shown.</p>
+      <p class="trial-note">Your first 14 days include all of Pro. The trial ends on its own and never turns into a charge. US prices shown.</p>
     </div>
   </section>
 
   <!-- Finale -->
-  <section id="launch" class="finale">
+  <section id="launch" class="finale" data-rise>
     <div class="wrap">
       <div class="sun" aria-hidden="true"></div>
-      <h2 class="reveal">Your mornings, eased.</h2>
-      <p class="reveal">Slowdawn arrives on the App Store in January 2027, for iPhone with iOS 26 or later.</p>
+      <h2 class="reveal">Your mornings,&nbsp;eased.</h2>
+      <p class="reveal">Slowdawn is coming soon to the App Store, for iPhone with iOS 26 or later.</p>
       <div class="cta-row reveal">
-        <a class="store" href="mailto:hello@slowdawnapp.com?subject=Tell%20me%20when%20Slowdawn%20launches"><span>Want a note on launch day?</span><strong>Email hello@slowdawnapp.com</strong></a>
+        <a class="store" href="mailto:hello@slowdawnapp.com"><span>Questions?</span><strong>hello@slowdawnapp.com</strong></a>
       </div>
     </div>
   </section>
@@ -257,22 +277,63 @@
 </footer>
 
 <script>
-  // Gentle fade-in as sections scroll into view. Without JavaScript, everything simply shows.
+  // Motion, all of it gentle, and all of it off when Reduce Motion is on.
+  // - sections fade up as they arrive
+  // - the sky behind the page warms from night to dawn as you scroll (--dawn)
+  // - phones drift at a slightly different speed from the text (data-depth), the stars slower still
+  // - the hero text eases away as you leave it, and the sun rises in the last section
+  // Without JavaScript, everything simply shows, on a night sky.
   document.documentElement.classList.remove("no-js");
   (function () {
+    var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var root = document.documentElement;
     var items = document.querySelectorAll(".reveal");
-    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (!("IntersectionObserver" in window) || still) {
       items.forEach(function (el) { el.classList.add("shown"); });
     } else {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("shown"); io.unobserve(e.target); } });
-      }, { rootMargin: "0px 0px -8% 0px" });
+      }, { rootMargin: "0px 0px -10% 0px" });
       items.forEach(function (el) { io.observe(el); });
     }
-    // Reduce Motion: keep the tour still on its first frame.
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (still) {
       document.querySelectorAll("video[autoplay]").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
     }
+
+    var depth = Array.prototype.slice.call(document.querySelectorAll("[data-depth]"));
+    var heroCopy = document.querySelector("[data-hero-copy]");
+    var rise = document.querySelector("[data-rise]");
+    var ticking = false;
+
+    function clamp(v) { return Math.max(0, Math.min(1, v)); }
+    function frame() {
+      ticking = false;
+      var y = window.scrollY, vh = window.innerHeight;
+      var max = Math.max(1, document.documentElement.scrollHeight - vh);
+      // The sky changes colour even with Reduce Motion: it's a colour change, not movement.
+      root.style.setProperty("--dawn", (Math.pow(clamp(y / max), 1.15)).toFixed(3));
+      if (rise) {
+        var r = rise.getBoundingClientRect();
+        rise.style.setProperty("--rise", still ? 1 : clamp((vh - r.top) / (vh * 0.85)).toFixed(3));
+      }
+      if (still) return;
+      root.style.setProperty("--stars", (-y * 0.08).toFixed(1));
+      depth.forEach(function (el) {
+        var b = el.getBoundingClientRect();
+        if (b.bottom < -200 || b.top > vh + 200) return;
+        var offset = (b.top + b.height / 2 - vh / 2) * parseFloat(el.dataset.depth);
+        el.style.translate = "0 " + offset.toFixed(1) + "px";
+      });
+      if (heroCopy) {
+        var t = clamp(y / (vh * 0.7));
+        heroCopy.style.opacity = (1 - t * 0.85).toFixed(3);
+        heroCopy.style.translate = "0 " + (y * 0.18).toFixed(1) + "px";
+      }
+    }
+    function request() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+    window.addEventListener("scroll", request, { passive: true });
+    window.addEventListener("resize", request);
+    frame();
   })();
 </script>
 </body>
