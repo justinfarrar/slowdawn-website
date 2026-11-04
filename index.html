@@ -1,38 +1,279 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Slowdawn · The alarm that eases you in</title>
-<meta name="description" content="Slowdawn, an iPhone alarm that eases you in. Coming to the App Store in January 2027.">
-<meta name="theme-color" content="#0B1026">
-<link rel="icon" href="/img/favicon.png">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<style>
-  :root { color-scheme: dark; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    display: grid; place-items: center; text-align: center;
-    background: radial-gradient(120% 60% at 50% 100%, rgba(255,178,122,.28), transparent 60%),
-                linear-gradient(180deg, #070B1F 0%, #141B3D 50%, #3A3F82 85%, #5B4B8A 100%);
-    color: #EEF1FA;
-    font: 18px/1.5 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    padding: 24px max(20px, env(safe-area-inset-left)) 24px max(20px, env(safe-area-inset-right));
-  }
-  img { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto 20px; display: block; }
-  h1 { font-size: 40px; margin: 0 0 6px; letter-spacing: -0.01em; }
-  p { margin: 0 0 6px; color: #CFE6F7; }
-  .soon { color: #FFB27A; font-weight: 600; margin-top: 14px; }
-  .mail { color: #B4BBD6; font-size: 15px; margin-top: 28px; user-select: all; }
-</style>
+<meta name="description" content="Slowdawn is an iPhone alarm that plans your mornings for you. It moves your wake time a few minutes at a time, works around weekends, clock changes and trips, and explains every alarm it sets.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://slowdawnapp.com/">
+<meta property="og:title" content="Slowdawn · The alarm that eases you in">
+<meta property="og:description" content="Wake up gently. Slowdawn does the planning.">
+<meta property="og:image" content="https://slowdawnapp.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070B1F">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <img src="/img/icon-512.png" alt="">
-    <h1>Slowdawn</h1>
-    <p>The alarm that eases you in.</p>
-    <p class="soon">Coming to the App Store, January 2027</p>
-    <p class="mail">hello@slowdawnapp.com</p>
-  </main>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/icon-512.png" alt="" width="32" height="32">Slowdawn</a>
+    <nav aria-label="Main">
+      <a href="#how" class="hide-sm">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="support/index.html">Help</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">An alarm for iPhone</p>
+        <h1>Wake up gently. <em>Slowdawn does the planning.</em></h1>
+        <p class="lede">Tell it when you want to be up. It moves your alarm there a few minutes at a time, thinks ahead about weekends, clock changes and trips, and tells you why every alarm is set where it is. All you do is wake up.</p>
+        <div class="cta-row">
+          <a class="store" href="#launch"><span>Coming to the App Store</span><strong>January 2027</strong></a>
+          <p class="cta-note">14 days of everything, free.<br>No account, ever.</p>
+        </div>
+      </div>
+      <div class="phone">
+        <video autoplay muted loop playsinline preload="metadata" poster="media/tour-poster.jpg"
+               aria-label="A short tour of Slowdawn: tomorrow's alarm, 7:40, day 4 of 12 toward 7:00. Tapping a day shows how its alarm was worked out, and the Journey chart shows the whole plan stepping toward the goal.">
+          <source src="media/tour.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <section id="how" class="band">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Three answers. Then it takes it from here.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <h3>Tell it your goal</h3>
+          <p>When you need to be up, when you get up now, and how gently you'd like to get there. That's the whole setup.</p>
+        </div>
+        <div class="step reveal">
+          <h3>It plans the way</h3>
+          <p>Small daily steps, and smaller ones when you're moving earlier, since that's the harder direction for most body clocks.</p>
+        </div>
+        <div class="step reveal">
+          <h3>You just wake up</h3>
+          <p>Two weeks of alarms are always set ahead. They ring like the Clock app's, even on silent or in a Focus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- It thinks ahead -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">It thinks ahead</p>
+        <h2>Life changes the plan. <em>You don't have to.</em></h2>
+        <p>The moments that usually wreck a sleep routine are the ones Slowdawn plans for. You'll see each one coming, already handled.</p>
+      </div>
+      <div class="scenes">
+        <article class="scene reveal">
+          <h3>A new wake-up time</h3>
+          <p>No jumping an hour overnight. It gets you there in steps your body can keep up with.</p>
+          <span class="reason"><b>7:40</b> Workdays · day 4 of 12 toward 7:00</span>
+        </article>
+        <article class="scene reveal">
+          <h3>The clocks change</h3>
+          <p>The hour is spread across the week around it, so the change arrives without the jolt.</p>
+          <span class="reason"><b>6:56</b> Easing into the clock change, 5 of 7</span>
+        </article>
+        <article class="scene reveal">
+          <h3>Weekends</h3>
+          <p>Sleep in a little, with the sunrise if you like. Weekends move in step, so Monday never jumps.</p>
+          <span class="reason"><b>7:52</b> Weekends · Sunrise +5</span>
+        </article>
+        <article class="scene reveal">
+          <h3>A big day ahead</h3>
+          <p>New job, first day of school, an early flight. Give it the date and you'll be ready a few days early.</p>
+          <span class="reason"><b>7:15</b> Workdays · day 3 of 6 toward 6:45 for New job</span>
+        </article>
+        <article class="scene reveal">
+          <h3>Travel</h3>
+          <p>Shift a little each day before you fly, so you land closer to local time. Then keep your usual, or move it.</p>
+          <span class="reason"><b>7:30</b> In London · your usual +30 min</span>
+        </article>
+        <article class="scene reveal">
+          <h3>Back from time off</h3>
+          <p>Vacations end gently too. It eases you back toward your workday time instead of all at once.</p>
+          <span class="reason"><b>7:20</b> Easing back after Vacation, 2 of 3</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Every alarm has a reason -->
+  <section class="band">
+    <div class="wrap feature">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">Nothing hidden</p>
+        <h2>Every alarm comes with a reason.</h2>
+        <p>An alarm that moves on its own has to earn your trust. So Slowdawn always shows its work. Tap any morning to see exactly how its time was worked out.</p>
+        <ul class="tick-list">
+          <li>The next seven days, always in view</li>
+          <li>Any change previewed before it's saved</li>
+          <li>Skip a day or sleep in from the Lock Screen</li>
+        </ul>
+      </div>
+      <div class="phone reveal">
+        <img src="img/day.jpg" alt="Wednesday's alarm, 7:40, with how it was worked out: plan step 4 of 12 from 8:00, 5 minutes a step." width="720" height="1566" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Clock changes -->
+  <section class="band-alt">
+    <div class="wrap feature flip">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">Twice a year</p>
+        <h2>The clocks change. <em>Your body doesn't have to jump.</em></h2>
+        <p>Seasonal clock changes are hard on the body. Slowdawn already knows the next one is coming and spreads the hour across the week, a few minutes a day.</p>
+        <p>It's on automatically, and it's free. Next US change: March 14, 2027.</p>
+      </div>
+      <div class="phone reveal">
+        <img src="img/clock.jpg" alt="Clocks go forward: the week of March 7 to 14, each alarm a few minutes earlier than the last, reaching 7:30 on the day the clocks change." width="720" height="1564" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section class="band">
+    <div class="wrap feature">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">Your journey</p>
+        <h2>Watch your mornings come into line.</h2>
+        <p>See the whole plan at a glance: where you started, where you are, and the day you'll arrive. Your mornings settle into a rhythm, and the chart shows them doing it.</p>
+        <ul class="tick-list">
+          <li>Bedtime and a wind-down reminder that move with your alarm</li>
+          <li>Sunrise where you live, drawn right on the chart</li>
+          <li>Widgets, the Lock Screen and Apple Watch, all in step</li>
+        </ul>
+      </div>
+      <div class="phone reveal">
+        <img src="img/journey.jpg" alt="The Journey chart: workday alarms stepping down from 8:00 toward 7:00 over two weeks, with the sunrise line beneath." width="720" height="1564" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Promises -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Made with care</p>
+        <h2>Calm by design.</h2>
+      </div>
+      <div class="promises">
+        <div class="promise reveal">
+          <h3>Gentle by default</h3>
+          <p>Every change can be eased in. Abrupt ones only happen when you choose them, and the gentlest sounds swell in over a full minute.</p>
+        </div>
+        <div class="promise reveal">
+          <h3>Honest science</h3>
+          <p>Small steps are easier than big jumps, and daylight helps set your body clock. Slowdawn sticks to well-supported ideas and cites its sources.</p>
+          <p class="src">Sources: <a href="https://www.sleepfoundation.org/sleep-hygiene/how-to-go-to-sleep-earlier">Sleep Foundation</a> · <a href="https://www.colorado.edu/today/2017/02/01/cant-get-sleep-wilderness-weekend-can-help">CU Boulder</a> · <a href="https://cdc.gov/yellow-book/hcp/travel-air-sea/jet-lag-disorder.html">CDC</a></p>
+        </div>
+        <div class="promise reveal">
+          <h3>Private, completely</h3>
+          <p>No account, no servers, no tracking. Your plans, your location and your sleep stay on your iPhone. <a href="privacy/index.html">Privacy policy</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="band">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2>Try everything, free, for 14 days.</h2>
+        <p>Long enough to finish a typical plan and feel the difference. Then keep the essentials for free, or go Pro.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <p class="alt">Forever</p>
+          <ul class="tick-list">
+            <li>Alarms that ring like the Clock app's</li>
+            <li>The plan you make in setup</li>
+            <li>Clock-change smoothing</li>
+            <li>Sunrise with an offset</li>
+          </ul>
+        </div>
+        <div class="plan pro reveal">
+          <h3>Pro</h3>
+          <p class="price">$12.99 <small>a year</small></p>
+          <p class="alt">or $1.99 a month · or $24.99 once</p>
+          <ul class="tick-list">
+            <li>Plans for every schedule and big day</li>
+            <li>Sunrise limits and first light</li>
+            <li>Bedtime and wind-down</li>
+            <li>Trips, calendar and Apple Health</li>
+          </ul>
+        </div>
+      </div>
+      <p class="trial-note">The trial ends on its own and never turns into a charge. US prices shown.</p>
+    </div>
+  </section>
+
+  <!-- Finale -->
+  <section id="launch" class="finale">
+    <div class="wrap">
+      <div class="sun" aria-hidden="true"></div>
+      <h2 class="reveal">Your mornings, eased.</h2>
+      <p class="reveal">Slowdawn arrives on the App Store in January 2027, for iPhone with iOS 26 or later.</p>
+      <div class="cta-row reveal">
+        <a class="store" href="mailto:hello@slowdawnapp.com?subject=Tell%20me%20when%20Slowdawn%20launches"><span>Want a note on launch day?</span><strong>Email hello@slowdawnapp.com</strong></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Justin Farrar</span>
+    <nav aria-label="Footer">
+      <a href="support/index.html">Help &amp; support</a>
+      <a href="privacy/index.html">Privacy</a>
+      <span class="copy-mail">hello@slowdawnapp.com</span>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Gentle fade-in as sections scroll into view. Without JavaScript, everything simply shows.
+  document.documentElement.classList.remove("no-js");
+  (function () {
+    var items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      items.forEach(function (el) { el.classList.add("shown"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("shown"); io.unobserve(e.target); } });
+      }, { rootMargin: "0px 0px -8% 0px" });
+      items.forEach(function (el) { io.observe(el); });
+    }
+    // Reduce Motion: keep the tour still on its first frame.
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll("video[autoplay]").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
+    }
+  })();
+</script>
 </body>
 </html>
