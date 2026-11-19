@@ -176,7 +176,7 @@ li, .reason, summary, .store strong, .cta-note, .trial-note, h3 { text-wrap: pre
 @media (min-width: 901px) { .hero + section .section-head { max-width: 560px; } }
 
 /* ---------- Sections ---------- */
-section { padding-block: clamp(52px, 6.5vw, 88px); }
+section { padding-block: clamp(42px, 5.2vw, 70px); }
 /* One continuous night sky under every section: no seams between them. */
 main { position: relative; background: transparent; }
 /* One fixed sky behind every section: night at the top of the page, dawn by the bottom.
