@@ -121,14 +121,41 @@ li, .reason, summary, .store strong, .cta-note, .trial-note, h3 { text-wrap: pre
 .store {
   display: inline-flex; flex-direction: column; align-items: flex-start; gap: 3px;
   padding: 11px 22px; border-radius: 14px; max-width: 100%;
-  background: #000; color: #fff; text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  line-height: 1.15;
+  color: #fff; text-decoration: none; line-height: 1.15;
+  /* A slow ring of dawn light circles the border, with a soft glow behind it that breathes.
+     ::after is the button itself (black face + moving ring); ::before is the blurred glow under it. */
+  position: relative; isolation: isolate; border: 1.5px solid transparent;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1);
+}
+.store::before, .store::after { content: ""; position: absolute; border-radius: 14px; pointer-events: none; }
+.store::after {
+  inset: -1.5px; z-index: -1; border: 1.5px solid transparent;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    conic-gradient(from var(--ring), rgba(255, 255, 255, 0.25) 0deg, var(--peach) 45deg, #FFE3B8 75deg, var(--gold) 100deg, rgba(255, 255, 255, 0.25) 150deg, rgba(255, 255, 255, 0.25) 360deg) border-box;
+  animation: ring 5s linear infinite;
+}
+.store::before {
+  inset: -7px; z-index: -2; border-radius: 22px;
+  background: conic-gradient(from var(--ring), rgba(255, 178, 122, 0.15) 0deg, var(--peach) 50deg, var(--gold) 100deg, rgba(255, 178, 122, 0.15) 190deg, rgba(255, 178, 122, 0.15) 360deg);
+  filter: blur(16px); opacity: var(--glow);
+  animation: ring 5s linear infinite, breathe 3.2s ease-in-out infinite;
+  transition: opacity .25s;
+}
+@property --ring { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@keyframes ring { to { --ring: 360deg; } }
+@property --glow { syntax: "<number>"; inherits: false; initial-value: .85; }
+@keyframes breathe { 50% { --glow: .5; } }
+.store:hover { transform: translateY(-2px); }
+.store:hover::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .store::after, .store::before { animation: none; }
+  .store:hover { transform: none; }
 }
 .store svg { width: 24px; height: 24px; flex: none; }
 .store span { display: block; font-size: 12px; letter-spacing: 0.02em; opacity: 0.75; }
 .store strong { display: block; font: 600 18px/1.2 var(--sans); overflow-wrap: anywhere; }
-.store:hover { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+.store:hover { color: #fff; }
 .cta-note { font-size: 15px; color: var(--soft); line-height: 1.5; }
 
 /* ---------- Phone ---------- */
