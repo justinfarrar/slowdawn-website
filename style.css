@@ -310,6 +310,37 @@ body { background: var(--deep); }
 .plan .tick-list { margin-top: 22px; }
 .trial-note { text-align: center; color: var(--muted); font-size: 15px; margin-top: 22px; }
 
+/* Privacy, right under the hero */
+.privacy-band { padding-bottom: 0; }
+@media (min-width: 901px) { .hero + .privacy-band { padding-top: 24px; } }
+.privacy {
+  display: flex; align-items: center; gap: 22px; max-width: 560px;
+  padding: 24px 28px; border-radius: 22px;
+  background: var(--card); border: 1px solid rgba(207, 230, 247, 0.22);
+}
+.privacy > div { min-width: 0; }
+.privacy .lock { flex: none; width: 44px; height: 44px; fill: none; stroke: var(--mist); stroke-width: 1.6; stroke-linecap: round; }
+.privacy h2 { font-size: clamp(28px, 3.2vw, 36px); margin-bottom: 6px; }
+.privacy p { color: var(--soft); font-size: 17px; line-height: 1.5; }
+.privacy a { white-space: nowrap; }
+@media (max-width: 520px) { .privacy { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px; } }
+
+/* Sources under the steps */
+.steps + .src { margin-top: 30px; font-size: 13px; color: var(--muted); }
+.steps + .src a { color: var(--muted); }
+
+/* The three trial promises, above the plans */
+.trial {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+  max-width: 1060px; margin: 0 auto 28px;
+}
+.trial > div {
+  padding: 22px 24px; border-radius: 20px; color: var(--soft); font-size: 16px; line-height: 1.5;
+  background: rgba(255, 178, 122, 0.08); border: 1px solid rgba(255, 178, 122, 0.35);
+}
+.trial b { display: block; font: 600 19px/1.3 var(--sans); color: var(--text); margin-bottom: 4px; }
+@media (max-width: 900px) { .trial { grid-template-columns: 1fr; gap: 12px; } }
+
 /* Final call */
 .finale {
   text-align: center; position: relative; overflow: hidden;
